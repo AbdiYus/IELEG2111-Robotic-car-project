@@ -1,8 +1,0 @@
-prefix=/home/mosa/catkin_ws/install
-
-Name: PGKB
-Description: Description of PGKB
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
