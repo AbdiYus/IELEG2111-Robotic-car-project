@@ -1,5 +1,5 @@
 #include <Arduino.h>
- 
+#include <Encoder.h>
 
 // put function declarations here:
 int myFunction(int, int);
