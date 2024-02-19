@@ -1,7 +1,7 @@
 # Ignore all build directories
 build/
 build_isolated/
-
+build
 # Ignore all devel directories
 devel/
 devel_isolated/
