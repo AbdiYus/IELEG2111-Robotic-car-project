@@ -7,7 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/ros/Desktop/IELEG2111-Robotic-car-project/catkin_ws/devel:$CMAKE_PREFIX_PATH"
-export PWD='/home/ros/Desktop/IELEG2111-Robotic-car-project/catkin_ws/build'
-export ROSLISP_PACKAGE_DIRECTORIES="/home/ros/Desktop/IELEG2111-Robotic-car-project/catkin_ws/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/ros/Desktop/IELEG2111-Robotic-car-project/catkin_ws/src:$ROS_PACKAGE_PATH"
+export LD_LIBRARY_PATH="/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib:$LD_LIBRARY_PATH"
+export PWD='/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/build'
+export PYTHONPATH="/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/python3/dist-packages:$PYTHONPATH"
+export ROS_PACKAGE_PATH='/home/IELEG2111-Robotic-car-project/catkin_ws/src:/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/src:/opt/ros/noetic/share'
