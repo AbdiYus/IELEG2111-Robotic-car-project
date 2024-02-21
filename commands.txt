@@ -1,1 +1,5 @@
-tester om github fungerer! gwegoiweghoiweg
+-- Terminal ---
+~/.bashrc
+source ~/IELEG2111-Robotic-car-project/catkin_ws/devel/setup.bash
+source /opt/ros/noetic/setup.bash
+
