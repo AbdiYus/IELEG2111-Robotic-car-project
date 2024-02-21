@@ -9,10 +9,12 @@ extern Servo m2;
 
 namespace Motor {
     void initMotor(int pin1, int pin2);
-    void forward();
-    void backward();
-    void turnRight();
-    void turnLeft();
+    void drive(int right = 0, int left = 0);
+    // void forward();
+    // void backward();
+    // void turnRight();
+    // void turnLeft();
+
     void stop();
 }
 
