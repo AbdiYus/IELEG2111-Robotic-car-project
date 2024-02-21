@@ -103,6 +103,17 @@ double pwmRightReq = 0;
 double lastCmdVelReceived = 0;
  
 /////////////////////// Tick Data Publishing Functions ////////////////////////
+/*
+Tick Data Publishing Functions
+It has 2 functions. 1 function for each wheel
+  - right_wheel_tick
+  - left_wheel_tick
+
+    The functions will be called when the wheel is moving
+    The functions will keep track of the number of ticks
+    The functions will reset if the number of ticks reaches the maximum or minimum
+    the functions will increse oor decrese the ticks depending on the direction of the wheel    
+*/
  
 // Increment the number of ticks
 void right_wheel_tick() {
@@ -126,27 +137,35 @@ void right_wheel_tick() {
   }
   /*
   if the wheel is moving forward
+    - the number of ticks will increase
+    - It will also check if you have reached max ticks, then reseting it to the minimum
   */ 
   if (Direction_right) {
      /*
      right_wheel_tick_count will keep track of the number of ticks
+     .data will supposidly contain the number of ticks
+     so here we are just cheking if the number of ticks is equal to the maximum number of ticks which is 32767
      */
     if (right_wheel_tick_count.data == encoder_maximum) {
-      right_wheel_tick_count.data = encoder_minimum;
+      right_wheel_tick_count.data = encoder_minimum; // if the encode is at the maximu it turns it into the minimum
+      // probably to make sure if the number reaches max it goes to min and continues counting upwards looping the numbers
     }
     else {
-      right_wheel_tick_count.data++;  
+      right_wheel_tick_count.data++; // when you move the wheel forward the number of ticks will increase 
     }    
   }
   /*
   If the wheel is reversing
   */
   else {
+    /*
+    checks the tick and if it has reached minimum, it will reset it to the maximum
+    */
     if (right_wheel_tick_count.data == encoder_minimum) {
       right_wheel_tick_count.data = encoder_maximum;
     }
     else {
-      right_wheel_tick_count.data--;  
+      right_wheel_tick_count.data--;  // if the wheel is reversing the number of ticks will decrease
     }   
   }
 }
@@ -192,9 +211,10 @@ void calc_vel_left_wheel(){
   static double prevTime = 0;
    
   // Variable gets created and initialized the first time a function is called.
-  static int prevLeftCount = 0;
+  static int prevLeftCount = 0; // Will be updated later in the code on line 228
  
   // Manage rollover and rollunder when we get outside the 16-bit integer range 
+  // Calculate the difference between the current and previous wheel tick counts, handling 16-bit integer rollover and rollunder.
   int numOfTicks = (65535 + left_wheel_tick_count.data - prevLeftCount) % 65535;
  
   // If we have had a big jump, it means the tick count has rolled over.
@@ -203,7 +223,11 @@ void calc_vel_left_wheel(){
   }
  
   // Calculate wheel velocity in meters per second
-  velLeftWheel = numOfTicks/TICKS_PER_METER/((millis()/1000)-prevTime);
+  /*
+  Global variable! velLeftWheel, TICKS_PER_METER = 3100
+   
+  */
+  velLeftWheel = numOfTicks/TICKS_PER_METER/((millis()/1000)-prevTime); 
  
   // Keep track of the previous tick count
   prevLeftCount = left_wheel_tick_count.data;

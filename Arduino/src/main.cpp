@@ -45,6 +45,12 @@ int rightPos();
 void key(const std_msgs::Int32 &msg);
 void pos(const geometry_msgs::Twist &msg);
 
+// Calculations
+boolean leftDir = true;
+boolean rightDir = true;
+const int encoder_maximum = 32768;
+const int encoder_minimum = -32768;
+
 
 
 ros::Subscriber<std_msgs::Int32> keyboard("keyboard", &key);
@@ -79,6 +85,22 @@ void loop(){
    }
 }
 
+void left_tick_counter(){
+  long tick_val = left.read();
+  static long pre_tick_val = 0;
+
+  // Checks in which direction the motor is moving
+  if(tick_val != pre_tick_val){
+    leftDir = (tick_val > pre_tick_val)  ? true : false; 
+  }
+  if(leftDir){
+    if(tick_val == encoder_maximum) ? tick_val = encoder_minimum : tick_val++;
+  }
+  else{
+    if(tick_val == encoder_minimum) ? tick_val = encoder_maximum : tick_val--;
+  }
+  pre_tick_val = left.read();
+}
 int leftPos() {
   long newPositionL = left.read();
   if (newPositionL != oldPositionL) {
