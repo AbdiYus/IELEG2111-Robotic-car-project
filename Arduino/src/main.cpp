@@ -65,6 +65,9 @@ ros::Publisher leftPub("left_ticks", &left_tick);
 std_msgs::Int16 left_tick_counter;
 ros::Publisher leftTickPub("left_ticks_count", &left_tick_counter); 
 
+std_msgs::Int16 right_tick_counter;
+ros::Publisher rightTickPub("right_ticks_count", &right_tick_counter); 
+
 void setup(){
   Motor::initMotor(11, 13);
 
@@ -84,11 +87,11 @@ void loop(){
 
 void left_tick_counter_function(){
   int tick_val = left.read();
-  static int pre_tick_val = 0;
+  static int pre_tick_valL = 0;
 
   // Checks in which direction the motor is moving
-  if (tick_val != pre_tick_val) {
-    leftDir = (tick_val > pre_tick_val) ? true : false;
+  if (tick_val != pre_tick_valL) {
+    leftDir = (tick_val > pre_tick_valL) ? true : false;
   }
   if (leftDir) {
     if (tick_val == encoder_maximum) tick_val = encoder_minimum;
@@ -98,13 +101,36 @@ void left_tick_counter_function(){
     if (tick_val == encoder_minimum) tick_val = encoder_maximum;
     else tick_val--;
   }
-  pre_tick_val = left.read();
+  pre_tick_valL = left.read();
 
   std_msgs::Int16 tick_msg;
   tick_msg.data = tick_val;
   leftTickPub.publish(&tick_msg);
-  
 }
+
+void right_tick_counter_function(){
+  int tick_val = left.read();
+  static int pre_tick_valR = 0;
+
+  // Checks in which direction the motor is moving
+  if (tick_val != pre_tick_valR) {
+    leftDir = (tick_val > pre_tick_valR) ? true : false;
+  }
+  if (leftDir) {
+    if (tick_val == encoder_maximum) tick_val = encoder_minimum;
+    else tick_val++;
+  }
+  else {
+    if (tick_val == encoder_minimum) tick_val = encoder_maximum;
+    else tick_val--;
+  }
+  pre_tick_valR = left.read();
+
+  std_msgs::Int16 tick_msg;
+  tick_msg.data = tick_val;
+  rightTickPub.publish(&tick_msg);
+}
+
 int leftPos() {
   long newPositionL = left.read();
   if (newPositionL != oldPositionL) {

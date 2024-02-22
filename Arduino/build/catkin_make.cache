@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/home/ros/IELEG2111-Robotic-car-project/Arduino/devel -DCMAKE_INSTALL_PREFIX=/home/ros/IELEG2111-Robotic-car-project/Arduino/install -G Unix Makefiles
