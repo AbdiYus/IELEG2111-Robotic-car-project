@@ -65,6 +65,9 @@ ros::Publisher leftPub("left_ticks", &left_tick);
 std_msgs::Int16 left_tick_counter;
 ros::Publisher leftTickPub("left_ticks_count", &left_tick_counter); 
 
+std_msgs::Int16 right_tick_counter;
+ros::Publisher rightckPub("right_ticks_count", &right_tick_counter); 
+
 void setup(){
   Motor::initMotor(11, 13);
 
@@ -149,3 +152,26 @@ void cmd(const geometry_msgs::Twist &msg) {
     (rotation > 0 ? Motor::turnRight() : Motor::turnLeft());
   }
 }
+
+void right_tick_counter_function(){
+  int tick_val = left.read();
+  static int pre_tick_valR = 0;
+
+  // Checks in which direction the motor is moving
+  if (tick_val != pre_tick_valR) {
+    leftDir = (tick_val > pre_tick_valR) ? true : false;
+  }
+  if (leftDir) {
+    if (tick_val == encoder_maximum) tick_val = encoder_minimum;
+    else tick_val++;
+  }
+  else {
+    if (tick_val == encoder_minimum) tick_val = encoder_maximum;
+    else tick_val--;
+  }
+  pre_tick_valR = left.read();
+
+  std_msgs::Int16 tick_msg;
+  tick_msg.data = tick_val;
+  rightTickPub.publish(&tick_msg);
+
