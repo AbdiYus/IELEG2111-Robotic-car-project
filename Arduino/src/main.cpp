@@ -37,19 +37,13 @@ long prevTime = 0;
 long currentTime = 0;
 int interval = 100;
 
-// function
-void left_tick_counter_function();
-void right_tick_counter_function();
+// functions
+int leftPos();
+int rightPos();
 
 // ros 
 void key(const std_msgs::Int32 &msg);
-// void pos(const geometry_msgs::Twist &msg);
-
-// Calculations
-boolean leftDir = true;
-boolean rightDir = true;
-const int encoder_maximum = 32768;
-const int encoder_minimum = -32768;
+void pos(const geometry_msgs::Twist &msg);
 
 
 
@@ -73,57 +67,36 @@ void setup(){
 }
 
 void loop(){
+  left_tick.data = leftPos();
+  right_tick.data = rightPos();
+  currentTime = millis();
+
   if(currentTime - prevTime > interval){
       prevTime = currentTime;
       rightPub.publish(&right_tick);
       leftPub.publish(&left_tick);
       nh.spinOnce();
-   }   
+   }
+
+   
 }
 
-void left_tick_counter_function(){
-  int tick_val = left.read();
-  static int pre_tick_val = 0;
-
-  // Checks in which direction the motor is moving
-  if (tick_val != pre_tick_val) {
-    leftDir = (tick_val > pre_tick_val) ? true : false;
+int leftPos() {
+  long newPositionL = left.read();
+  if (newPositionL != oldPositionL) {
+    oldPositionL = newPositionL;
   }
-  if (leftDir) {
-    if (tick_val == encoder_maximum) tick_val = encoder_minimum;
-    else tick_val++;
-  }
-  else {
-    if (tick_val == encoder_minimum) tick_val = encoder_maximum;
-    else tick_val--;
-  }
-  pre_tick_val = left.read();
-
-  left_tick.data = tick_val;
-  leftPub.publish(&left_tick); 
+  return oldPositionL; // Always return a value
 }
 
-void right_tick_counter_function(){
-  int tick_val = left.read();
-  static int pre_tick_valR = 0;
-
-  // Checks in which direction the motor is moving
-  if (tick_val != pre_tick_valR) {
-    leftDir = (tick_val > pre_tick_valR) ? true : false;
+int rightPos() {
+  long newPositionR = right.read();
+  if (newPositionR != oldPositionR) {
+    oldPositionR = newPositionR;
   }
-  if (leftDir) {
-    if (tick_val == encoder_maximum) tick_val = encoder_minimum;
-    else tick_val++;
-  }
-  else {
-    if (tick_val == encoder_minimum) tick_val = encoder_maximum;
-    else tick_val--;
-  }
-  pre_tick_valR = left.read();
-
-  right_tick.data = tick_val;
-  rightPub.publish(&right_tick);
+  return oldPositionR; // Always return a value
 }
+
 
 // verider : bak ((--) 80-180 (++)), fram ((++) 0-80 (--))
 void key(const std_msgs::Int32& msg) {
