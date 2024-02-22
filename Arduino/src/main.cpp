@@ -45,6 +45,12 @@ int rightPos();
 void key(const std_msgs::Int32 &msg);
 void pos(const geometry_msgs::Twist &msg);
 
+// Calculations
+boolean leftDir = true;
+boolean rightDir = true;
+const int encoder_maximum = 32768;
+const int encoder_minimum = -32768;
+
 
 
 ros::Subscriber<std_msgs::Int32> keyboard("keyboard", &key);
@@ -56,6 +62,9 @@ ros::Publisher rightPub("right_ticks", &right_tick);
 std_msgs::Int16 left_tick; 
 ros::Publisher leftPub("left_ticks", &left_tick);
 
+std_msgs::Int16 left_tick_counter;
+ros::Publisher leftTickPub("left_ticks_count", &left_tick_counter); 
+
 void setup(){
   Motor::initMotor(11, 13);
 
@@ -64,21 +73,38 @@ void setup(){
  // nh.subscribe(cmd_vel);
   nh.advertise(leftPub);
   nh.advertise(rightPub);
+  nh.advertise(leftTickPub);
 }
 
 void loop(){
-  left_tick.data = leftPos();
-  right_tick.data = rightPos();
-  currentTime = millis();
 
-  if(currentTime - prevTime > interval){
-      prevTime = currentTime;
-      rightPub.publish(&right_tick);
-      leftPub.publish(&left_tick);
-      nh.spinOnce();
-   }
+  nh.spinOnce();
+  delay(1000);
 }
 
+void left_tick_counter_function(){
+  int tick_val = left.read();
+  static int pre_tick_val = 0;
+
+  // Checks in which direction the motor is moving
+  if (tick_val != pre_tick_val) {
+    leftDir = (tick_val > pre_tick_val) ? true : false;
+  }
+  if (leftDir) {
+    if (tick_val == encoder_maximum) tick_val = encoder_minimum;
+    else tick_val++;
+  }
+  else {
+    if (tick_val == encoder_minimum) tick_val = encoder_maximum;
+    else tick_val--;
+  }
+  pre_tick_val = left.read();
+
+  std_msgs::Int16 tick_msg;
+  tick_msg.data = tick_val;
+  leftTickPub.publish(&tick_msg);
+  
+}
 int leftPos() {
   long newPositionL = left.read();
   if (newPositionL != oldPositionL) {
