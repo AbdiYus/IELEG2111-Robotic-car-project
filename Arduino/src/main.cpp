@@ -174,4 +174,4 @@ void right_tick_counter_function(){
   std_msgs::Int16 tick_msg;
   tick_msg.data = tick_val;
   rightTickPub.publish(&tick_msg);
-
+}
