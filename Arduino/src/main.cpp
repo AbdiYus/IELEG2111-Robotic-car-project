@@ -62,8 +62,6 @@ ros::Publisher rightPub("right_ticks", &right_tick);
 std_msgs::Int16 left_tick; 
 ros::Publisher leftPub("left_ticks", &left_tick);
 
-std_msgs::Int16 left_tick_counter;
-ros::Publisher leftTickPub("left_ticks_count", &left_tick_counter); 
 
 void setup(){
   Motor::initMotor(11, 13);
@@ -73,7 +71,6 @@ void setup(){
  // nh.subscribe(cmd_vel);
   nh.advertise(leftPub);
   nh.advertise(rightPub);
-  nh.advertise(leftTickPub);
 }
 
 void loop(){
@@ -106,18 +103,18 @@ void left_tick_counter_function(){
   }
   pre_tick_val = left.read();
 
-  std_msgs::Int16 tick_msg;
-  tick_msg.data = tick_val;
-  leftTickPub.publish(&tick_msg);
-  
+  std_msgs::Int16 left_tick;
+  left_tick.data = tick_val;
+  leftPub.publish(&left_tick); 
 }
-int leftPos() {
-  long newPositionL = left.read();
-  if (newPositionL != oldPositionL) {
-    oldPositionL = newPositionL;
-  }
-  return oldPositionL; // Always return a value
-}
+
+// int leftPos() {
+//   long newPositionL = left.read();
+//   if (newPositionL != oldPositionL) {
+//     oldPositionL = newPositionL;
+//   }
+//   return oldPositionL; // Always return a value
+// }
 
 int rightPos() {
   long newPositionR = right.read();
