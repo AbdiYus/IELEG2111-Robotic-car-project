@@ -52,7 +52,6 @@ void loop(){
   }
 }
 
-// verider : bak ((--) 80-180 (++)), fram ((++) 0-80 (--))
 void key(const std_msgs::Int16& msg) {
   if (msg.data == 1)  Motor::drive();   // up
   if (msg.data == 2)  Motor::drive(180,180);  // down

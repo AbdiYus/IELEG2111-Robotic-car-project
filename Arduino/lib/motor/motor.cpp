@@ -13,6 +13,8 @@ void Motor::initMotor(int pin1, int pin2) {
 /**
 *   This function let's you drive the car by setting the speed of the motors.
 *   
+*   ## General control:
+*   Values : bak ((--) 80-180 (++)), fram ((++) 0-80 (--))
 *   ## Basic rules:
 *   - 0 = full forward
 *   - 180 = full backward
