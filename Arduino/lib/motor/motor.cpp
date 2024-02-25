@@ -13,15 +13,16 @@ void Motor::initMotor(int pin1, int pin2) {
 /**
 *   This function let's you drive the car by setting the speed of the motors.
 *   
-*   Basic rules:
+*   ## Basic rules:
 *   - 0 = full forward
 *   - 180 = full backward
 *   - 160 right 20 left = turn right
 *   - 20 right 160 left = turn left
 *   - 80 right 80 left = stop
 *
-*   @param right - speed of the right motor
-*   @param left - speed of the left motor
+*   ## Parameters:
+*   right - speed of the right motor
+*   left - speed of the left motor
 */
 void Motor::drive(int right, int left) {
   m1.write(right);
