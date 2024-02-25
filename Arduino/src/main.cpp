@@ -5,10 +5,11 @@
 #endif
 
 #include <ros.h>
-#include <geometry_msgs/Twist.h>
+
 #include <std_msgs/Int16.h>
 #include "motor.h"
 #include "encoder_a.h"
+#include "calculations.h"
 
 ros::NodeHandle  nh;
 
