@@ -61,8 +61,8 @@ void key(const std_msgs::Int16& msg) {
 }
 
 void publishTicks() {
-  left_tick.data = Encoder_a::left_counter();
-  right_tick.data = Encoder_a::right_counter();
+  left_tick.data = Encoder_a::tick_counter('l');
+  right_tick.data = Encoder_a::tick_counter('r');
   leftPub.publish(&left_tick);
   rightPub.publish(&right_tick);
 }
