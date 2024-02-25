@@ -7,7 +7,7 @@
 
 namespace Calculations {
     double velocity(int tick);
-    void movement(double vel, geometry_msgs::Twist& data);
+    void movement(double velR, double velL, geometry_msgs::Twist data);
 }
 
 #endif

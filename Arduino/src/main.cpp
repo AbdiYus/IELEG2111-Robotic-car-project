@@ -13,23 +13,26 @@
 
 ros::NodeHandle  nh;
 
-// delay
+/*  Delay  */
 long prevTime = 0;
 long currentTime = 0;
 int interval = 100;
 
-// ros 
+/*  Functions  */
 void key(const std_msgs::Int16 &msg);
-//void pos(const geometry_msgs::Twist &msg);
+void publishTicks();
+void move(const geometry_msgs::Twist &msg);
 
+
+/*  ROS  */
 ros::Subscriber<std_msgs::Int16> keyboard("keyboard", &key);
-//ros::Subscriber<geometry_msgs::Twist> cmd_vel("cmd_vel", &cmd);
+ros::Subscriber<geometry_msgs::Twist> cmd_vel("cmd_vel", &move);
 
 std_msgs::Int16 right_tick; 
 ros::Publisher rightPub("right_ticks", &right_tick);
 std_msgs::Int16 left_tick; 
 ros::Publisher leftPub("left_ticks", &left_tick);
-void publishTicks();
+
 
 
 void setup(){
@@ -38,7 +41,7 @@ void setup(){
 
   nh.initNode();
   nh.subscribe(keyboard);
- // nh.subscribe(cmd_vel);
+  nh.subscribe(cmd_vel);
   nh.advertise(leftPub);
   nh.advertise(rightPub);
 }
@@ -52,6 +55,9 @@ void loop(){
   }
 }
 
+/**
+*   Move the robot based on the message from the keyboard topic
+*/
 void key(const std_msgs::Int16& msg) {
   if (msg.data == 1)  Motor::drive();   // up
   if (msg.data == 2)  Motor::drive(180,180);  // down
@@ -60,6 +66,9 @@ void key(const std_msgs::Int16& msg) {
   if (msg.data == 0)  Motor::stop();
 }
 
+/**
+*   Publish the number of ticks from the encoders
+*/
 void publishTicks() {
   left_tick.data = Encoder_a::tick_counter('l');
   right_tick.data = Encoder_a::tick_counter('r');
@@ -67,20 +76,13 @@ void publishTicks() {
   rightPub.publish(&right_tick);
 }
 
-// void cmd(const geometry_msgs::Twist &msg) {
-//   const float x = msg.linear.x;   
-//   const float rotation = msg.linear.z;
-
-//   if(x == 0 && rotation == 0) {
-//     Motor::stop();
-//     return;
-//   }
-
-//   if(rotation == 0) { // forward or backwards
-//     (x > 0 ? Motor::forward() : Motor::backward());
-//   }
-
-//   if(x == 0) { // turn left or right
-//     (rotation > 0 ? Motor::turnRight() : Motor::turnLeft());
-//   }
-// }
+/**
+*   Move the robot based on the message from the cmd_vel topic
+*
+*   @param msg - the message from the cmd_vel topic
+*/
+void move(const geometry_msgs::Twist &msg) {
+  double velR = Calculations::velocity(Encoder_a::tick_counter('r'));
+  double velL = Calculations::velocity(Encoder_a::tick_counter('l'));
+  Calculations::movement(velR, velL, msg);
+}
