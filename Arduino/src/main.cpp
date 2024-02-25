@@ -92,8 +92,7 @@ void key(const std_msgs::Int32& msg) {
 
 
 void right_tick_counter(){
-  int tick_val = right
-  .read();
+  int tick_val = right.read();
   static int pre_tick_valR = 0;
 
   // Checks in which direction the motor is moving
