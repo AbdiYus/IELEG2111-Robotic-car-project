@@ -28,21 +28,19 @@ double Calculations::velocity(int tick) {
 *   @param data - the message from the cmd_vel topic
 */
 void Calculations::movement(double velR, double velL, geometry_msgs::Twist data) {
-    if(data.angular.z != 0) { // if we are turning!
-        if(data.angular.z > 0)  Motor::drive(20, 160); // turn left
-        else Motor::drive(160, 20); // turn right 
-    } else {
-        // remove differences in wheel velocities to make sure the robot goes straight
-        // static double prevDiff = 0;
-        // static double prevPrevDiff = 0;
-        // double currDifference = velL - velR;
-        // double avgDifference = (prevDiff+prevPrevDiff+currDifference)/3;
-        // prevPrevDiff = prevDiff;
-        // prevDiff = currDifference;
+    int wheelSpeed = 0;
+    int leftSpeed = 0;
+    int rightSpeed = 0;
 
-        // serial print the diffrence to check what is happening!!! TODO!!! 
-        if(data.linear.x > 0) Motor::drive(160, 160); // go straight
-        else Motor::drive(20, 20); // go backwards
+    if(data.angular.z != 0) { // if we are turning!
+        leftSpeed = 25*data.angular.z + 80;
+        rightSpeed = -25*data.angular.z + 80;
+        if(data.angular.z > 0)  Motor::drive(leftSpeed, rightSpeed); // turn left
+        else Motor::drive(leftSpeed, rightSpeed); // turn right 
+    } else {
+        wheelSpeed = 90*data.linear.x + 80; 
+        if(data.linear.x > 0) Motor::drive(wheelSpeed, wheelSpeed); // go straight
+        else Motor::drive(wheelSpeed, wheelSpeed); // go backwards
     }
 
     if(data.angular.z == 0 && data.linear.x == 0) Motor::drive(80, 80); // stop the robot
