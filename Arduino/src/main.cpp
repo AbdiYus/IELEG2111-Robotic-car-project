@@ -37,7 +37,6 @@ ros::Publisher leftPub("left_ticks", &left_tick);
 
 void setup(){
   Motor::initMotor(11, 13);
-  Encoder_a::initEncoder(19, 18, 2, 4);
 
   nh.initNode();
   nh.subscribe(keyboard);

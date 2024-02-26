@@ -1,21 +1,8 @@
 #include "encoder_a.h"
 #include <std_msgs/Int16.h>
 
-Encoder left(0,0); // temporary values
-Encoder right(0,0); // temporary values
-
-/**
-*   Initialize the encoders
-*
-*   @param l1 - the first pin of the left encoder
-*   @param l2 - the second pin of the left encoder
-*   @param r1 - the first pin of the right encoder
-*   @param r2 - the second pin of the right encoder
-*/
-void Encoder_a::initEncoder(int l1, int l2, int r1, int r2) {
-    left = Encoder(l1, l2);
-    right = Encoder(r1, r2);
-}
+Encoder left(2, 4); 
+Encoder right(19, 18); 
 
 /**
 *   Count the number of ticks from the encoder based on the direction
@@ -33,8 +20,8 @@ int Encoder_a::tick_counter(char side) {
   if (tick_val != pre_tick_val) {
     direction = (tick_val > pre_tick_val) ? true : false;
   }
-  if (direction)  tick_val = (tick_val == encoder_maximum ? encoder_minimum : tick_val + 1);
-  else tick_val = (tick_val == encoder_minimum ? encoder_maximum : tick_val - 1);
+  if (direction)  (tick_val == encoder_maximum ? encoder_minimum : tick_val++);
+  else (tick_val == encoder_minimum ? encoder_maximum : tick_val--);
 
   pre_tick_val = (side == 'l') ? left.read() : right.read();
   return tick_val;
