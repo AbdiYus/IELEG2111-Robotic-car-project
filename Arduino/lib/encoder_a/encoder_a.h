@@ -8,7 +8,6 @@ extern Encoder left;
 extern Encoder right;
 
 namespace Encoder_a {
-    void initEncoder(int l1, int l2, int r1, int r2);
     int tick_counter(char side);
 }
 #endif
