@@ -45,5 +45,5 @@ void Calculations::movement(double velR, double velL, geometry_msgs::Twist data)
         else Motor::drive(20, 20); // go backwards
     }
 
-    if(data.angular.z == 0 && data.linear.x == 0) Motor::drive(0, 0); // stop the robot
+    if(data.angular.z == 0 && data.linear.x == 0) Motor::drive(80, 80); // stop the robot
 }
