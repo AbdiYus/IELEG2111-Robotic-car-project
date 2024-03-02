@@ -3,8 +3,13 @@
 		<param name="port" value="/dev/ttyACM0" />
 		<!-- <param name="baud" value="9600" /> -->
 	</node>
+	
 	<!-- LiDAR -->
 	<include file="$(find rplidar_ros)/launch/rplidar_a2m12.launch" />
+
 	<!-- IMU -->
 	<include file="$(find mpu_6050_driver)/mpu_6050.launch" />
+
+	<!-- Localization data publisher -->
+	<include file="$(find localization_data_pub)/launch/localization_data_pub.launch" />
 </launch>
