@@ -47,7 +47,7 @@ CATKIN_SKIP_TESTING:BOOL=OFF
 CATKIN_SYMLINK_INSTALL:BOOL=OFF
 
 //List of ';' separated packages to build
-CATKIN_WHITELIST_PACKAGES:STRING=
+CATKIN_WHITELIST_PACKAGES:STRING=hector_compressed_map_transport;hector_geotiff;hector_geotiff_launch;hector_geotiff_plugins;hector_imu_attitude_to_tf;hector_map_server;hector_map_tools;hector_mapping;hector_marker_drawing;hector_nav_msgs;hector_slam;hector_slam_launch;hector_trajectory_server
 
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
@@ -549,7 +549,8 @@ hector_compressed_map_transport_SOURCE_DIR:STATIC=/home/mosa/IELEG2111-Robotic-c
 //Value Computed by CMake
 hector_geotiff_BINARY_DIR:STATIC=/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/build/hector_slam/hector_geotiff
 
-hector_geotiff_DIR:PATH=
+//The directory containing a CMake configuration file for hector_geotiff.
+hector_geotiff_DIR:PATH=/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/share/hector_geotiff/cmake
 
 //Value Computed by CMake
 hector_geotiff_SOURCE_DIR:STATIC=/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/src/hector_slam/hector_geotiff
@@ -651,7 +652,7 @@ launch_mosa_bot_BINARY_DIR:STATIC=/home/mosa/IELEG2111-Robotic-car-project/catki
 launch_mosa_bot_SOURCE_DIR:STATIC=/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/src/mosa_bot/launch_mosa_bot
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/noetic/lib/libxmlrpcpp.so
+lib:FILEPATH=/opt/ros/noetic/lib/liblaser_geometry.so
 
 //Value Computed by CMake
 localization_data_pub_BINARY_DIR:STATIC=/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/build/localization_data_pub
@@ -1004,7 +1005,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=25
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=17
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1048,7 +1049,7 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Boost
-FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/usr/lib/aarch64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake][cfound components: system thread ][v1.71.0()]
+FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/usr/lib/aarch64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake][cfound components: thread ][v1.71.0()]
 //Details about finding OpenCV
 FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr][v4.2.0()]
 //Details about finding PY_em

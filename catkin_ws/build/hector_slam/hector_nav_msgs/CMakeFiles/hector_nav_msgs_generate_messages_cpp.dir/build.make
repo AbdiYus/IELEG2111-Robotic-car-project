@@ -62,9 +62,9 @@ hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp: /h
 
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetDistanceToObstacle.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetDistanceToObstacle.h: /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/src/hector_slam/hector_nav_msgs/srv/GetDistanceToObstacle.srv
+/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetDistanceToObstacle.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetDistanceToObstacle.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetDistanceToObstacle.h: /opt/ros/noetic/share/geometry_msgs/msg/PointStamped.msg
-/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetDistanceToObstacle.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetDistanceToObstacle.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetDistanceToObstacle.h: /opt/ros/noetic/share/gencpp/srv.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from hector_nav_msgs/GetDistanceToObstacle.srv"
@@ -72,12 +72,12 @@ hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp: /h
 
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRecoveryInfo.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRecoveryInfo.h: /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/src/hector_slam/hector_nav_msgs/srv/GetRecoveryInfo.srv
-/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRecoveryInfo.h: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRecoveryInfo.h: /opt/ros/noetic/share/nav_msgs/msg/Path.msg
-/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRecoveryInfo.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRecoveryInfo.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRecoveryInfo.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRecoveryInfo.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRecoveryInfo.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRecoveryInfo.h: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
+/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRecoveryInfo.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRecoveryInfo.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRecoveryInfo.h: /opt/ros/noetic/share/gencpp/srv.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from hector_nav_msgs/GetRecoveryInfo.srv"
@@ -85,12 +85,12 @@ hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp: /h
 
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRobotTrajectory.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRobotTrajectory.h: /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/src/hector_slam/hector_nav_msgs/srv/GetRobotTrajectory.srv
-/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRobotTrajectory.h: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRobotTrajectory.h: /opt/ros/noetic/share/nav_msgs/msg/Path.msg
-/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRobotTrajectory.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRobotTrajectory.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRobotTrajectory.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRobotTrajectory.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRobotTrajectory.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRobotTrajectory.h: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
+/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRobotTrajectory.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRobotTrajectory.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRobotTrajectory.h: /opt/ros/noetic/share/gencpp/srv.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from hector_nav_msgs/GetRobotTrajectory.srv"
@@ -98,11 +98,11 @@ hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp: /h
 
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetSearchPosition.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetSearchPosition.h: /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/src/hector_slam/hector_nav_msgs/srv/GetSearchPosition.srv
-/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetSearchPosition.h: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
-/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetSearchPosition.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetSearchPosition.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetSearchPosition.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetSearchPosition.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetSearchPosition.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetSearchPosition.h: /opt/ros/noetic/share/geometry_msgs/msg/PoseStamped.msg
+/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetSearchPosition.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetSearchPosition.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetSearchPosition.h: /opt/ros/noetic/share/gencpp/srv.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from hector_nav_msgs/GetSearchPosition.srv"
@@ -110,10 +110,10 @@ hector_slam/hector_nav_msgs/CMakeFiles/hector_nav_msgs_generate_messages_cpp: /h
 
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetNormal.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetNormal.h: /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/src/hector_slam/hector_nav_msgs/srv/GetNormal.srv
+/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetNormal.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetNormal.h: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetNormal.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetNormal.h: /opt/ros/noetic/share/geometry_msgs/msg/PointStamped.msg
-/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetNormal.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetNormal.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetNormal.h: /opt/ros/noetic/share/gencpp/srv.h.template
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from hector_nav_msgs/GetNormal.srv"
