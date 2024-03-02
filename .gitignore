@@ -1,24 +1,24 @@
 # Ignore all build directories
-build/
-build_isolated/
-build
+./catkin_ws/build/
+./catkin_ws/build_isolated/
+./catkin_ws/build
 # Ignore all devel directories
-catkin_ws/devel/
-devel_isolated/
+./catkin_ws/devel/
+./catkin_ws/devel_isolated/
 
 # Ignore installed files and directories
-install/
-install_isolated/
+./catkin_ws/install/
+./catkin_ws/install_isolated/
 
 # Ignore log files
-*.log
-*.log.*
+./catkin_ws/*.log
+./catkin_ws/*.log.*
 
 # Ignore Python byte-compiled files
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
+./catkin_ws/__pycache__/
+./catkin_ws/*.pyc
+./catkin_ws/*.pyo
+./catkin_ws/*.pyd
 
 # Ignore temporary files that end with ~
 *~
