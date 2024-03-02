@@ -1,6 +1,2 @@
 - setup-file:
-<<<<<<< HEAD
-    local-name: /home/ros/IELEG2111-Robotic-car-project/catkin_ws/devel/setup.sh
-=======
-    local-name: /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/setup.sh
->>>>>>> origin
+    local-name: /home/ros/Desktop/IELEG2111-Robotic-car-project/catkin_ws/devel/setup.sh
