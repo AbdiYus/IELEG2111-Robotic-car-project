@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"hector_compressed_map_transport\"
 
-CXX_INCLUDES = -I/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/src/hector_slam/hector_map_tools/include -I/home/didmup/catkin_ws/devel/include -I/home/didmup/catkin_ws/src/lidar_bot/lidarbot_ws/src/sensor_msgs/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 -isystem /usr/include/opencv4 
+CXX_INCLUDES = -I/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/src/hector_slam/hector_map_tools/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/didmup/catkin_ws/devel/include -I/home/didmup/catkin_ws/src/lidar_bot/lidarbot_ws/src/sensor_msgs/include -I/usr/include/eigen3 -isystem /usr/include/opencv4 
 

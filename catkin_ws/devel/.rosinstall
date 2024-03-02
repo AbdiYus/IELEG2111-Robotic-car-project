@@ -1,6 +1,2 @@
 - setup-file:
-<<<<<<< HEAD
     local-name: /home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/setup.sh
-=======
-    local-name: /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/setup.sh
->>>>>>> cc2ca8602a730e37fbe04d008cad5acbed12b961

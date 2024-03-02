@@ -2,4 +2,4 @@
 source_root_dir = '/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/src'
 whitelisted_packages = ''.split(';') if '' != '' else []
 blacklisted_packages = ''.split(';') if '' != '' else []
-underlay_workspaces = '/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel;/home/didmup/catkin_ws/devel;/opt/ros/noetic'.split(';') if '/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel;/home/didmup/catkin_ws/devel;/opt/ros/noetic' != '' else []
+underlay_workspaces = '/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel;/opt/ros/noetic'.split(';') if '/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel;/opt/ros/noetic' != '' else []

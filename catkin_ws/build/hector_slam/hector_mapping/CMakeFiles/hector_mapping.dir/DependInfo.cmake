@@ -24,10 +24,10 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/include"
   "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/src/hector_slam/hector_mapping/include/hector_slam_lib"
-  "/home/didmup/catkin_ws/devel/include"
-  "/home/didmup/catkin_ws/src/lidar_bot/lidarbot_ws/src/sensor_msgs/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+  "/home/didmup/catkin_ws/devel/include"
+  "/home/didmup/catkin_ws/src/lidar_bot/lidarbot_ws/src/sensor_msgs/include"
   "/usr/include/eigen3"
   )
 

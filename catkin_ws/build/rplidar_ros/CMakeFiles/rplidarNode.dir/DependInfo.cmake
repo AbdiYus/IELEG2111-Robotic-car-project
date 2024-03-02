@@ -35,10 +35,10 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/src/rplidar_ros/./sdk/include"
   "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/src/rplidar_ros/./sdk/src"
-  "/home/didmup/catkin_ws/devel/include"
-  "/home/didmup/catkin_ws/src/lidar_bot/lidarbot_ws/src/sensor_msgs/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+  "/home/didmup/catkin_ws/devel/include"
+  "/home/didmup/catkin_ws/src/lidar_bot/lidarbot_ws/src/sensor_msgs/include"
   )
 
 # Targets to which this target links.

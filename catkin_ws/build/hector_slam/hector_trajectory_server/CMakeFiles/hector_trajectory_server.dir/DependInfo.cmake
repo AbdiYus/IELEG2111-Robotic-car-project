@@ -19,11 +19,11 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/include"
   "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/src/hector_slam/hector_map_tools/include"
-  "/home/didmup/catkin_ws/devel/include"
-  "/home/didmup/catkin_ws/src/lidar_bot/lidarbot_ws/src/sensor_msgs/include"
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/eigen3"
+  "/home/didmup/catkin_ws/devel/include"
+  "/home/didmup/catkin_ws/src/lidar_bot/lidarbot_ws/src/sensor_msgs/include"
   )
 
 # Targets to which this target links.

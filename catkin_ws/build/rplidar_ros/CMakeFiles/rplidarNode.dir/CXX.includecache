@@ -602,24 +602,6 @@ std_srvs/Empty.h
 sl_lidar.h
 /home/didmup/IELEG2111-Robotic-car-project/catkin_ws/src/rplidar_ros/src/sl_lidar.h
 
-/home/didmup/catkin_ws/devel/include/sensor_msgs/LaserScan.h
-string
--
-vector
--
-memory
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-std_msgs/Header.h
--
-
 /opt/ros/noetic/include/ros/advertise_options.h
 ros/forwards.h
 /opt/ros/noetic/include/ros/ros/forwards.h
@@ -1269,6 +1251,24 @@ ros/forwards.h
 /opt/ros/noetic/include/ros/ros/forwards.h
 
 /opt/ros/noetic/include/rosconsole/macros_generated.h
+
+/opt/ros/noetic/include/sensor_msgs/LaserScan.h
+string
+-
+vector
+-
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
 
 /opt/ros/noetic/include/std_msgs/Header.h
 string

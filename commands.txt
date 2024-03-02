@@ -3,3 +3,6 @@
 source ~/IELEG2111-Robotic-car-project/catkin_ws/devel/setup.bash
 source /opt/ros/noetic/setup.bash
 
+
+-- Rostopic ---
+rostopic pub /test std_msgs/String "data: hello there" -r 5
