@@ -1,17 +1,3 @@
-/*
- * rosserial Servo Control Example
- *
- * This sketch demonstrates the control of hobby R/C servos
- * using ROS and the arduiono
- * 
- * For the full tutorial write up, visit
- * www.ros.org/wiki/rosserial_arduino_demos
- *
- * For more information on the Arduino Servo Library
- * Checkout :
- * http://www.arduino.cc/en/Reference/Servo
- */
-
 #if defined(ARDUINO) && ARDUINO >= 100
   #include "Arduino.h"
 #else
@@ -19,107 +5,83 @@
 #endif
 
 #include <ros.h>
-#include <std_msgs/Int16MultiArray.h>
-#include <geometry_msgs/Twist.h>
+
 #include <std_msgs/Int16.h>
-#include <std_msgs/Int32.h>
-#include <Encoder.h>
 #include "motor.h"
+#include "encoder_a.h"
+#include "calculations.h"
 
 ros::NodeHandle  nh;
 
-// ecoder
-Encoder left(19, 18);
-Encoder right(2, 4);
-long oldPositionL  = -999;
-long oldPositionR  = -999;
+/*  Delay  */
 long prevTime = 0;
 long currentTime = 0;
 int interval = 100;
 
-// functions
-int leftPos();
-int rightPos();
-
-// ros 
-void key(const std_msgs::Int32 &msg);
-void pos(const geometry_msgs::Twist &msg);
+/*  Functions  */
+void key(const std_msgs::Int16 &msg);
+void publishTicks();
+void move(const geometry_msgs::Twist &msg);
 
 
-
-ros::Subscriber<std_msgs::Int32> keyboard("keyboard", &key);
-//ros::Subscriber<geometry_msgs::Twist> cmd_vel("cmd_vel", &cmd);
+/*  ROS  */
+ros::Subscriber<std_msgs::Int16> keyboard("keyboard", &key);
+ros::Subscriber<geometry_msgs::Twist> cmd_vel("cmd_vel", &move);
 
 std_msgs::Int16 right_tick; 
 ros::Publisher rightPub("right_ticks", &right_tick);
-
 std_msgs::Int16 left_tick; 
 ros::Publisher leftPub("left_ticks", &left_tick);
+
+
 
 void setup(){
   Motor::initMotor(11, 13);
 
   nh.initNode();
   nh.subscribe(keyboard);
- // nh.subscribe(cmd_vel);
+  nh.subscribe(cmd_vel);
   nh.advertise(leftPub);
   nh.advertise(rightPub);
 }
 
 void loop(){
-  left_tick.data = leftPos();
-  right_tick.data = rightPos();
   currentTime = millis();
-
-  if(currentTime - prevTime > interval){
-      prevTime = currentTime;
-      rightPub.publish(&right_tick);
-      leftPub.publish(&left_tick);
-      nh.spinOnce();
-   }
-}
-
-int leftPos() {
-  long newPositionL = left.read();
-  if (newPositionL != oldPositionL) {
-    oldPositionL = newPositionL;
+  if(currentTime - prevTime > interval) {
+    prevTime = currentTime;
+    publishTicks();
+    nh.spinOnce();
   }
-  return oldPositionL; // Always return a value
 }
 
-int rightPos() {
-  long newPositionR = right.read();
-  if (newPositionR != oldPositionR) {
-    oldPositionR = newPositionR;
-  }
-  return oldPositionR; // Always return a value
-}
-
-
-// verider : bak ((--) 80-180 (++)), fram ((++) 0-80 (--))
-void key(const std_msgs::Int32& msg) {
-  if (msg.data == 1)  Motor::forward();   // up
-  if (msg.data == 2)  Motor::backward();  // down
-  if (msg.data == 3)  Motor::turnRight(); // right
-  if (msg.data == 4) Motor::turnLeft();   // left
+/**
+*   Move the robot based on the message from the keyboard topic
+*/
+void key(const std_msgs::Int16& msg) {
+  if (msg.data == 1)  Motor::drive();   // up
+  if (msg.data == 2)  Motor::drive(180,180);  // down
+  if (msg.data == 3)  Motor::drive(160,20); // right
+  if (msg.data == 4) Motor::drive(20,160);   // left
   if (msg.data == 0)  Motor::stop();
 }
 
+/**
+*   Publish the number of ticks from the encoders
+*/
+void publishTicks() {
+  left_tick.data = Encoder_a::tick_counter('l');
+  right_tick.data = Encoder_a::tick_counter('r');
+  leftPub.publish(&left_tick);
+  rightPub.publish(&right_tick);
+}
 
-void cmd(const geometry_msgs::Twist &msg) {
-  const float x = msg.linear.x;   
-  const float rotation = msg.linear.z;
-
-  if(x == 0 && rotation == 0) {
-    Motor::stop();
-    return;
-  }
-
-  if(rotation == 0) { // forward or backwards
-    (x > 0 ? Motor::forward() : Motor::backward());
-  }
-
-  if(x == 0) { // turn left or right
-    (rotation > 0 ? Motor::turnRight() : Motor::turnLeft());
-  }
+/**
+*   Move the robot based on the message from the cmd_vel topic
+*
+*   @param msg - the message from the cmd_vel topic
+*/
+void move(const geometry_msgs::Twist &msg) {
+  double velR = Calculations::velocity(Encoder_a::tick_counter('r'));
+  double velL = Calculations::velocity(Encoder_a::tick_counter('l'));
+  Calculations::movement(velR, velL, msg);
 }

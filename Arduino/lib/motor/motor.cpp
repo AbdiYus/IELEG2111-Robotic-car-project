@@ -9,24 +9,26 @@ void Motor::initMotor(int pin1, int pin2) {
     m2.attach(pin2, 1000, 2000);
 }
 
-void Motor::forward() {
-    m1.write(0);
-    m2.write(0);
-}
 
-void Motor::backward() {
-    m1.write(180);
-    m2.write(180);
-}
-
-void Motor::turnRight() {
-    m1.write(160);
-    m2.write(20);  
-}
-
-void Motor::turnLeft() {
-    m1.write(20);
-    m2.write(160);  
+/**
+*   This function let's you drive the car by setting the speed of the motors.
+*   
+*   ## General control:
+*   Values : bak ((--) 80-180 (++)), fram ((++) 0-80 (--))
+*   ## Basic rules:
+*   - 0 = full forward
+*   - 180 = full backward
+*   - 160 right 20 left = turn right
+*   - 20 right 160 left = turn left
+*   - 80 right 80 left = stop
+*
+*   ## Parameters:
+*   right - speed of the right motor
+*   left - speed of the left motor
+*/
+void Motor::drive(int right, int left) {
+  m1.write(right);
+  m2.write(left);
 }
 
 void Motor::stop() {
