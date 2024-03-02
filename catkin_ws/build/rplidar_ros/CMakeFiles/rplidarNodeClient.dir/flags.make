@@ -6,5 +6,5 @@ CXX_FLAGS = -std=c++11  -O3 -DNDEBUG
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"rplidar_ros\"
 
-CXX_INCLUDES = -I/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/src/rplidar_ros/./sdk/include -I/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/src/rplidar_ros/./sdk/src -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/didmup/catkin_ws/devel/include -I/home/didmup/catkin_ws/src/lidar_bot/lidarbot_ws/src/sensor_msgs/include 
+CXX_INCLUDES = -I/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/src/rplidar_ros/./sdk/include -I/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/src/rplidar_ros/./sdk/src -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
 

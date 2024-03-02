@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/src/hector_slam/hector_imu_tools/src/pose_and_orientation_to_imu_node.cpp" "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/build/hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/src/pose_and_orientation_to_imu_node.cpp.o"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/src/hector_slam/hector_imu_tools/src/pose_and_orientation_to_imu_node.cpp" "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/build/hector_slam/hector_imu_tools/CMakeFiles/pose_and_orientation_to_imu_node.dir/src/pose_and_orientation_to_imu_node.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -19,8 +19,6 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/opt/ros/noetic/include"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
-  "/home/didmup/catkin_ws/devel/include"
-  "/home/didmup/catkin_ws/src/lidar_bot/lidarbot_ws/src/sensor_msgs/include"
   )
 
 # Targets to which this target links.

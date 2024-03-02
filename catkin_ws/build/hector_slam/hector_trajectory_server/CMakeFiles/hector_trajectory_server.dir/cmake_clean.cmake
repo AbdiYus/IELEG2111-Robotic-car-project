@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/hector_trajectory_server/hector_trajectory_server"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/hector_trajectory_server/hector_trajectory_server.pdb"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/hector_trajectory_server/hector_trajectory_server"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/hector_trajectory_server/hector_trajectory_server.pdb"
   "CMakeFiles/hector_trajectory_server.dir/src/hector_trajectory_server.cpp.o"
 )
 

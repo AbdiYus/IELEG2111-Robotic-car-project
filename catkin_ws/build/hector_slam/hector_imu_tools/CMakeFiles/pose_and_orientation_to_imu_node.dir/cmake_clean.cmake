@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/hector_imu_tools/pose_and_orientation_to_imu_node"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/hector_imu_tools/pose_and_orientation_to_imu_node.pdb"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/hector_imu_tools/pose_and_orientation_to_imu_node"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/hector_imu_tools/pose_and_orientation_to_imu_node.pdb"
   "CMakeFiles/pose_and_orientation_to_imu_node.dir/src/pose_and_orientation_to_imu_node.cpp.o"
 )
 

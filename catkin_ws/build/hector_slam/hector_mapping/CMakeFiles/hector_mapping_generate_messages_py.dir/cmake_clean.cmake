@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/python3/dist-packages/hector_mapping/msg/_HectorDebugInfo.py"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/python3/dist-packages/hector_mapping/msg/_HectorIterData.py"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/python3/dist-packages/hector_mapping/msg/__init__.py"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/python3/dist-packages/hector_mapping/srv/_ResetMapping.py"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/python3/dist-packages/hector_mapping/srv/__init__.py"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/python3/dist-packages/hector_mapping/msg/_HectorDebugInfo.py"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/python3/dist-packages/hector_mapping/msg/_HectorIterData.py"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/python3/dist-packages/hector_mapping/msg/__init__.py"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/python3/dist-packages/hector_mapping/srv/_ResetMapping.py"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/python3/dist-packages/hector_mapping/srv/__init__.py"
   "CMakeFiles/hector_mapping_generate_messages_py"
 )
 

@@ -1,8 +1,8 @@
-prefix=/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel
+prefix=/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel
 
 Name: hector_map_tools
 Description: Description of hector_map_tools
 Version: 0.5.2
-Cflags: -I/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/src/hector_slam/hector_map_tools/include -I/usr/include/eigen3
+Cflags: -I/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/src/hector_slam/hector_map_tools/include -I/usr/include/eigen3
 Libs: -L${prefix}/lib 
 Requires: nav_msgs

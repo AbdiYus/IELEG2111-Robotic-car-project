@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/share/common-lisp/ros/hector_nav_msgs/srv/GetDistanceToObstacle.lisp"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/share/common-lisp/ros/hector_nav_msgs/srv/GetNormal.lisp"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/share/common-lisp/ros/hector_nav_msgs/srv/GetRecoveryInfo.lisp"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/share/common-lisp/ros/hector_nav_msgs/srv/GetRobotTrajectory.lisp"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/share/common-lisp/ros/hector_nav_msgs/srv/GetSearchPosition.lisp"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/share/common-lisp/ros/hector_nav_msgs/srv/GetDistanceToObstacle.lisp"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/share/common-lisp/ros/hector_nav_msgs/srv/GetNormal.lisp"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/share/common-lisp/ros/hector_nav_msgs/srv/GetRecoveryInfo.lisp"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/share/common-lisp/ros/hector_nav_msgs/srv/GetRobotTrajectory.lisp"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/share/common-lisp/ros/hector_nav_msgs/srv/GetSearchPosition.lisp"
   "CMakeFiles/hector_nav_msgs_generate_messages_lisp"
 )
 

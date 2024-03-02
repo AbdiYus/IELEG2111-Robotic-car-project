@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/libgeotiff_writer.pdb"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/libgeotiff_writer.so"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/libgeotiff_writer.pdb"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/libgeotiff_writer.so"
   "CMakeFiles/geotiff_writer.dir/src/geotiff_writer/geotiff_writer.cpp.o"
 )
 

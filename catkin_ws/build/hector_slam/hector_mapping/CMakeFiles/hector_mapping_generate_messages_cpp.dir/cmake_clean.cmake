@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_mapping/HectorDebugInfo.h"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_mapping/HectorIterData.h"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_mapping/ResetMapping.h"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_mapping/HectorDebugInfo.h"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_mapping/HectorIterData.h"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_mapping/ResetMapping.h"
   "CMakeFiles/hector_mapping_generate_messages_cpp"
 )
 

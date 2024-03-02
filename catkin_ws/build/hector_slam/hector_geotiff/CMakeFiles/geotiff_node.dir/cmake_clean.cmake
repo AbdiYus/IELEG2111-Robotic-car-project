@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/hector_geotiff/geotiff_node"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/hector_geotiff/geotiff_node.pdb"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/hector_geotiff/geotiff_node"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/hector_geotiff/geotiff_node.pdb"
   "CMakeFiles/geotiff_node.dir/src/geotiff_node.cpp.o"
 )
 

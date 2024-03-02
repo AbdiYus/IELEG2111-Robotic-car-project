@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/didmup/IELEG2111-Robotic-car-project/catkin_ws/src/hector_slam/hector_geotiff_launch
-# Build directory: /home/didmup/IELEG2111-Robotic-car-project/catkin_ws/build/hector_slam/hector_geotiff_launch
+# Source directory: /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/src/hector_slam/hector_geotiff_launch
+# Build directory: /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/build/hector_slam/hector_geotiff_launch
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

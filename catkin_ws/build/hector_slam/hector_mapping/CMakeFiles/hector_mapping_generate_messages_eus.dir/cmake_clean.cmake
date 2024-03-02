@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/share/roseus/ros/hector_mapping/manifest.l"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/share/roseus/ros/hector_mapping/msg/HectorDebugInfo.l"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/share/roseus/ros/hector_mapping/msg/HectorIterData.l"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/share/roseus/ros/hector_mapping/srv/ResetMapping.l"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/share/roseus/ros/hector_mapping/manifest.l"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/share/roseus/ros/hector_mapping/msg/HectorDebugInfo.l"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/share/roseus/ros/hector_mapping/msg/HectorIterData.l"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/share/roseus/ros/hector_mapping/srv/ResetMapping.l"
   "CMakeFiles/hector_mapping_generate_messages_eus"
 )
 

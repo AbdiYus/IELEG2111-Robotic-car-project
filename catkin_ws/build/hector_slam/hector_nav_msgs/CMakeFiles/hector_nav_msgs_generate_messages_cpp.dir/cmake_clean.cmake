@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetDistanceToObstacle.h"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetNormal.h"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRecoveryInfo.h"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRobotTrajectory.h"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetSearchPosition.h"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetDistanceToObstacle.h"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetNormal.h"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRecoveryInfo.h"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetRobotTrajectory.h"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/include/hector_nav_msgs/GetSearchPosition.h"
   "CMakeFiles/hector_nav_msgs_generate_messages_cpp"
 )
 

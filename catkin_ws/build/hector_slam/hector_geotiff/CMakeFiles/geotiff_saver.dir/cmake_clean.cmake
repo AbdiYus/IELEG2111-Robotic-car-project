@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/hector_geotiff/geotiff_saver"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/hector_geotiff/geotiff_saver.pdb"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/hector_geotiff/geotiff_saver"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/hector_geotiff/geotiff_saver.pdb"
   "CMakeFiles/geotiff_saver.dir/src/geotiff_saver.cpp.o"
 )
 

@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetDistanceToObstacle.py"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetNormal.py"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/python3/dist-packages/hector_nav_msgs/srv/__init__.py"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetDistanceToObstacle.py"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetNormal.py"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/python3/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/python3/dist-packages/hector_nav_msgs/srv/__init__.py"
   "CMakeFiles/hector_nav_msgs_generate_messages_py"
 )
 

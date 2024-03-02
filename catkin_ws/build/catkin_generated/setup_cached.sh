@@ -7,4 +7,6 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/build'
+export PWD='/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/build'
+export ROS_PACKAGE_PATH='/home/IELEG2111-Robotic-car-project/catkin_ws/src:/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/src:/home/ros/Desktop/IELEG2111-Robotic-car-project/catkin_ws/src:/home/ros/IELEG2111-Robotic-car-project/catkin_ws/src
+:/opt/ros/noetic/share'

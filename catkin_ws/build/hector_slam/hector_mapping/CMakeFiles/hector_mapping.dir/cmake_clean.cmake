@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/hector_mapping/hector_mapping"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/hector_mapping/hector_mapping.pdb"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/hector_mapping/hector_mapping"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/hector_mapping/hector_mapping.pdb"
   "CMakeFiles/hector_mapping.dir/src/HectorMappingRos.cpp.o"
   "CMakeFiles/hector_mapping.dir/src/PoseInfoContainer.cpp.o"
   "CMakeFiles/hector_mapping.dir/src/main.cpp.o"

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/libhector_geotiff_plugins.pdb"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/libhector_geotiff_plugins.so"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/libhector_geotiff_plugins.pdb"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/libhector_geotiff_plugins.so"
   "CMakeFiles/hector_geotiff_plugins.dir/src/trajectory_geotiff_plugin.cpp.o"
 )
 

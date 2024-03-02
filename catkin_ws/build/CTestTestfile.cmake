@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/didmup/IELEG2111-Robotic-car-project/catkin_ws/src
-# Build directory: /home/didmup/IELEG2111-Robotic-car-project/catkin_ws/build
+# Source directory: /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/src
+# Build directory: /home/mosa/IELEG2111-Robotic-car-project/catkin_ws/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
@@ -26,14 +26,16 @@ subdirs("hector_slam/hector_geotiff")
 subdirs("hector_slam/hector_geotiff_plugins")
 subdirs("hector_slam/hector_marker_drawing")
 subdirs("rosserial/rosserial_server")
+subdirs("control")
 subdirs("hector_slam/hector_compressed_map_transport")
 subdirs("rplidar_ros")
 subdirs("hector_slam/hector_imu_attitude_to_tf")
 subdirs("hector_slam/hector_imu_tools")
 subdirs("hector_slam/hector_map_server")
 subdirs("hector_slam/hector_trajectory_server")
-subdirs("hector_slam/hector_mapping")
 subdirs("mosa_bot/launch_mosa_bot")
+subdirs("localization_data_pub")
 subdirs("rosserial/rosserial_embeddedlinux")
 subdirs("rosserial/rosserial_test")
 subdirs("rosserial/rosserial_windows")
+subdirs("hector_slam/hector_mapping")

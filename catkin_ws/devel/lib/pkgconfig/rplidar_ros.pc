@@ -1,4 +1,4 @@
-prefix=/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel
+prefix=/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel
 
 Name: rplidar_ros
 Description: Description of rplidar_ros

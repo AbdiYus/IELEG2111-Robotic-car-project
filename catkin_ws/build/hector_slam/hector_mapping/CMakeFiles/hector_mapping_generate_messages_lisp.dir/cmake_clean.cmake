@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/share/common-lisp/ros/hector_mapping/msg/HectorDebugInfo.lisp"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/share/common-lisp/ros/hector_mapping/msg/HectorIterData.lisp"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/share/common-lisp/ros/hector_mapping/srv/ResetMapping.lisp"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/share/common-lisp/ros/hector_mapping/msg/HectorDebugInfo.lisp"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/share/common-lisp/ros/hector_mapping/msg/HectorIterData.lisp"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/share/common-lisp/ros/hector_mapping/srv/ResetMapping.lisp"
   "CMakeFiles/hector_mapping_generate_messages_lisp"
 )
 

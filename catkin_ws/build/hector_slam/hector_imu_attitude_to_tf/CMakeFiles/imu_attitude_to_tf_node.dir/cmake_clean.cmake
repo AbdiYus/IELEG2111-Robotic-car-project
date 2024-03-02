@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/hector_imu_attitude_to_tf/imu_attitude_to_tf_node"
-  "/home/didmup/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/hector_imu_attitude_to_tf/imu_attitude_to_tf_node.pdb"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/hector_imu_attitude_to_tf/imu_attitude_to_tf_node"
+  "/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel/lib/hector_imu_attitude_to_tf/imu_attitude_to_tf_node.pdb"
   "CMakeFiles/imu_attitude_to_tf_node.dir/src/imu_attitude_to_tf_node.cpp.o"
 )
 
