@@ -47,7 +47,7 @@ CATKIN_SKIP_TESTING:BOOL=OFF
 CATKIN_SYMLINK_INSTALL:BOOL=OFF
 
 //List of ';' separated packages to build
-CATKIN_WHITELIST_PACKAGES:STRING=hector_compressed_map_transport;hector_geotiff;hector_geotiff_launch;hector_geotiff_plugins;hector_imu_attitude_to_tf;hector_map_server;hector_map_tools;hector_mapping;hector_marker_drawing;hector_nav_msgs;hector_slam;hector_slam_launch;hector_trajectory_server
+CATKIN_WHITELIST_PACKAGES:STRING=mpu_6050_driver
 
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
@@ -470,6 +470,9 @@ cpp_common_DIR:PATH=/opt/ros/noetic/share/cpp_common/cmake
 //The directory containing a CMake configuration file for cv_bridge.
 cv_bridge_DIR:PATH=/opt/ros/noetic/share/cv_bridge/cmake
 
+//The directory containing a CMake configuration file for dynamic_reconfigure.
+dynamic_reconfigure_DIR:PATH=/opt/ros/noetic/share/dynamic_reconfigure/cmake
+
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/noetic/share/gencpp/cmake
 
@@ -652,7 +655,7 @@ launch_mosa_bot_BINARY_DIR:STATIC=/home/mosa/IELEG2111-Robotic-car-project/catki
 launch_mosa_bot_SOURCE_DIR:STATIC=/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/src/mosa_bot/launch_mosa_bot
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/noetic/lib/liblaser_geometry.so
+lib:FILEPATH=/opt/ros/noetic/lib/librostime.so
 
 //Value Computed by CMake
 localization_data_pub_BINARY_DIR:STATIC=/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/build/localization_data_pub
@@ -669,6 +672,12 @@ message_generation_DIR:PATH=/opt/ros/noetic/share/message_generation/cmake
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/noetic/share/message_runtime/cmake
 
+//The directory containing a CMake configuration file for move_base.
+move_base_DIR:PATH=/opt/ros/noetic/share/move_base/cmake
+
+//The directory containing a CMake configuration file for move_base_msgs.
+move_base_msgs_DIR:PATH=/opt/ros/noetic/share/move_base_msgs/cmake
+
 //Value Computed by CMake
 mpu_6050_driver_BINARY_DIR:STATIC=/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/build/mpu_6050_driver
 
@@ -678,8 +687,20 @@ mpu_6050_driver_SOURCE_DIR:STATIC=/home/mosa/IELEG2111-Robotic-car-project/catki
 //The directory containing a CMake configuration file for nav_msgs.
 nav_msgs_DIR:PATH=/opt/ros/noetic/share/nav_msgs/cmake
 
+//Value Computed by CMake
+navstack_pub_BINARY_DIR:STATIC=/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/build/mosa_bot/navstack_pub
+
+//Value Computed by CMake
+navstack_pub_SOURCE_DIR:STATIC=/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/src/mosa_bot/navstack_pub
+
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/noetic/share/pluginlib/cmake
+
+//Value Computed by CMake
+ros_imu_bno055_BINARY_DIR:STATIC=/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/build/ros_imu_bno055
+
+//Value Computed by CMake
+ros_imu_bno055_SOURCE_DIR:STATIC=/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/src/ros_imu_bno055
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/noetic/share/rosconsole/cmake
@@ -1005,7 +1026,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=17
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
