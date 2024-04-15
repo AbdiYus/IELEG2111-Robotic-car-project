@@ -21,9 +21,9 @@ const double initialTheta = 0.00000000001;
 const double PI = 3.141592;
  
 // Robot physical constants
-const double TICKS_PER_REVOLUTION = 120; // For reference purposes.
+const double TICKS_PER_REVOLUTION = 600; // For reference purposes.
 const double WHEEL_RADIUS = 0.06; // Wheel radius in meters
-const double WHEEL_BASE = 0.2; // Center of left tire to center of right tire
+const double WHEEL_BASE = 0.1; // Center of left tire to center of right tire
 const double TICKS_PER_METER = 1007; // Original was 2800
  
 // Distance both wheels have traveled

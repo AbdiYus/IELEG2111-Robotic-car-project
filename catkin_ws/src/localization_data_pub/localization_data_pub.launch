@@ -1,4 +1,6 @@
 <launch>
+	<node pkg="localization_data_pub" type="ekf_odom_pub" name="ekf_odom_pub">
+	</node>
 	<node pkg="localization_data_pub" type="rviz_click_to_2d" name="rviz_click_to_2d">
 	</node>
 </launch>

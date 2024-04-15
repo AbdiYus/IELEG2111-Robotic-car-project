@@ -1,0 +1,2 @@
+mpu_6050_driver
+-DCATKIN_DEVEL_PREFIX=/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/mosa/IELEG2111-Robotic-car-project/catkin_ws/install -DCATKIN_WHITELIST_PACKAGES=mpu_6050_driver -G Unix Makefiles

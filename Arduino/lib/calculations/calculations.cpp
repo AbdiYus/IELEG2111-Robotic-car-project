@@ -32,12 +32,13 @@ void Calculations::movement(double velR, double velL, geometry_msgs::Twist data)
     int leftSpeed = 0;
     int rightSpeed = 0;
 
-    if(data.angular.z != 0) { // if we are turning!
-        leftSpeed = 25*data.angular.z + 80;
+    if (data.angular.z != 0) { // if we are turning!
+        leftSpeed = 25 * data.angular.z + 80;
         rightSpeed = -25*data.angular.z + 80;
         if(data.angular.z > 0)  Motor::drive(leftSpeed, rightSpeed); // turn left
         else Motor::drive(leftSpeed, rightSpeed); // turn right 
-    } else {
+    }
+    else {
         wheelSpeed = 90*data.linear.x + 80; 
         if(data.linear.x > 0) Motor::drive(wheelSpeed, wheelSpeed); // go straight
         else Motor::drive(wheelSpeed, wheelSpeed); // go backwards
