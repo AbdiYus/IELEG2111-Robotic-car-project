@@ -100,6 +100,7 @@ void ps5(const std_msgs::Float32MultiArray &msg) {
   if (msg.data[2] > 0.7) Motor::drive(180,180);  // down
   if (msg.data[0] > 0.7) Motor::drive(160,20); // right
   if (msg.data[0] < -0.7) Motor::drive(20,160);   // left
+  if (msg.data[5] == -1) Motor::stop();
 }
 
 /*
