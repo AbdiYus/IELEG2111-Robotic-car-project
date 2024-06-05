@@ -1,4 +1,5 @@
 # Ignore all build directories
+../catkin_ws/build
 ./catkin_ws/build/
 ./catkin_ws/build_isolated/
 ./catkin_ws/build
